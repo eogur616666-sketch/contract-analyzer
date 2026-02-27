@@ -16,7 +16,11 @@
 body{background:var(--bg);color:var(--text);font-family:'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-ui,sans-serif;min-height:100vh}
 .priv-banner{background:linear-gradient(90deg,#1a3a1a,#0f2a1a,#1a3a1a);border-bottom:1px solid #22543a;padding:10px 24px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:13.5px;font-weight:600;color:#6ee7a0;text-align:center}
 .priv-banner span{font-size:18px}
-header{background:linear-gradient(135deg,#14182a,#0d0f18);border-bottom:1px solid var(--border);padding:22px 32px;display:flex;align-items:center;gap:16px}
+header{background:linear-gradient(135deg,#14182a,#0d0f18);border-bottom:1px solid var(--border);padding:22px 32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.header-nav{display:flex;gap:6px;margin-left:auto}
+.header-nav-link{text-decoration:none;color:rgba(255,255,255,0.6);font-size:0.82rem;padding:5px 12px;border-radius:20px;transition:all 0.2s;border:1px solid rgba(255,255,255,0.15)}
+.header-nav-link:hover{background:rgba(255,255,255,0.1);color:white}
+.header-nav-link.active{background:rgba(255,255,255,0.15);color:white;font-weight:600}
 .logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 24px rgba(108,99,255,.4);flex-shrink:0}
 header h1{font-size:21px;font-weight:800;background:linear-gradient(135deg,#fff,var(--a2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 header p{font-size:12.5px;color:var(--muted);margin-top:3px}
@@ -118,6 +122,10 @@ textarea:focus{border-color:var(--accent)}
     <h1>계약서 AI 분석기</h1>
     <p>근로계약서 · 임대차 계약서 · 앱 약관 — API 없이 즉시 분석 · 완전 무료 · 100% 비공개</p>
   </div>
+  <nav class="header-nav">
+    <a class="header-nav-link" href="/">💰 연봉계산기</a>
+    <a class="header-nav-link active" href="/contract-analyzer/">📋 계약서 분석기</a>
+  </nav>
 </header>
 
 <div class="wrap">
